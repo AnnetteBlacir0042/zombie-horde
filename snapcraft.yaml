@@ -1,16 +1,16 @@
-name: [Snap Name] # you probably want to 'snapcraft register <name>'
+name: zombie-horde # you probably want to 'snapcraft register <name>'
 base: core22 # the base snap is the execution environment for this snap
 version: '1.0.0' # just for humans, typically '1.2+git' or '1.3.2'
-title: [Game Name]
-summary: [Short Summary]
-description: [Description]
+title: Zombie Apocalypse Horde
+summary: Survive endless waves of zombies.
+description: Gather supplies, craft weapons, and fortify defenses to withstand the zombie apocalypse in this fight for survival.
 
 grade: stable # must be 'stable' to release into candidate/stable channels
 confinement: strict # use 'strict' once you have the right plugs and slots
 
 apps:
-  [Snap Name]:
-    command: bin/[Snap Name]-bin
+  zombie-horde:
+    command: bin/zombie-horde-bin
     extensions: [gnome]
     plugs:
       - network
@@ -22,8 +22,8 @@ layout:
     bind: $SNAP/gnome-platform/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/webkit2gtk-4.0
 
 parts:
-  [Snap Name]:
+  zombie-horde:
     plugin: dump
     source: .
     organize:
-      [Snap Name]-bin: bin/
+      zombie-horde-bin: bin/
